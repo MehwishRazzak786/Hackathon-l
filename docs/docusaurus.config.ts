@@ -11,7 +11,7 @@ const config: Config = {
   // Set the production url of your site here
   url: 'https://mehwishrazzak786.github.io/Hackathon-l/',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/',
+  baseUrl: '/Hackathon-l/',
 
   // GitHub pages deployment config.
   organizationName: 'Mehwish Razzak',
