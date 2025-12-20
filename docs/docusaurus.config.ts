@@ -3,19 +3,22 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const isVercel = process.env.VERCEL === '1';
 const config: Config = {
   title: 'Physical AI & Humanoid Robotics',
   tagline: 'Bridging the gap between the digital brain and the physical body',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://mehwishrazzak786.github.io/Hackathon-l/',
+  url: isVercel 
+    ? 'https://hackathon-l-kappa.vercel.app/'
+    : 'https://mehwishrazzak786.github.io/Hackathon-l/',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/Hackathon-l/',
+  baseUrl: isVercel ? '/' : '/Hackathon-l/',
 
   // GitHub pages deployment config.
-  organizationName: 'Mehwish Razzak',
-  projectName: 'physical-ai-and-humanoid-robotics',
+  organizationName: 'mehwishrazzak786',
+  projectName: 'Hackathon-l',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
