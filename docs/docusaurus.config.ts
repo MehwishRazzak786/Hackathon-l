@@ -3,19 +3,22 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const isVercel = process.env.VERCEL === '1';
 const config: Config = {
   title: 'Physical AI & Humanoid Robotics',
   tagline: 'Bridging the gap between the digital brain and the physical body',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://github.com',
+  url: isVercel 
+    ? 'https://hackathon-l-kappa.vercel.app/'
+    : 'https://mehwishrazzak786.github.io/Hackathon-l/',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/',
+  baseUrl: isVercel ? '/' : '/Hackathon-l/',
 
   // GitHub pages deployment config.
-  organizationName: 'Mehwish Razzak',
-  projectName: 'physical-ai-and-humanoid-robotics',
+  organizationName: 'mehwishrazzak786',
+  projectName: 'Hackathon-l',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -30,7 +33,7 @@ const config: Config = {
 
   // Custom fields for API configuration (used in your hooks)
   customFields: {
-    apiUrl: process.env.REACT_APP_API_URL || 'https://ai-rative-book-backend-production.up.railway.app',
+    apiUrl: process.env.REACT_APP_API_URL || 'https://web-production-5d568.up.railway.app',
     apiKey: process.env.REACT_APP_API_KEY || '',
   },
 
@@ -41,7 +44,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
-          editUrl: 'https://github.com/MehwishRazzak786',
+          editUrl: 'https://github.com/MehwishRazzak786/Hackathon-l',
         },
         blog: false, // Blog disabled as per textbook structure
         theme: {
@@ -128,7 +131,7 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Mehwish GitHub',
+              label: 'Mehwish Razzak GitHub',
               href: 'https://github.com/MehwishRazzak786',
             },
             {
@@ -142,7 +145,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Repository',
-              href: 'https://github.com/MehwishRazzak786',
+              href: 'https://github.com/MehwishRazzak786/Hackathon-l',
             },
           ],
         },
